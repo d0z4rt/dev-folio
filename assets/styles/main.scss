@@ -1,8 +1,8 @@
-@use "./animation.scss";
-@use "./fonts.scss";
-@use "./header.scss";
-@use "./footer.scss";
-@use "./card.scss";
+@use './animation.scss';
+@use './fonts.scss';
+@use './header.scss';
+@use './footer.scss';
+@use './card.scss';
 
 html,
 body {
@@ -21,7 +21,7 @@ body {
 }
 
 body::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background-attachment: fixed;
@@ -63,7 +63,7 @@ h2 {
   margin: 0;
   padding: 0;
   font-weight: 500;
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
 }
 
 h1 {
@@ -103,7 +103,7 @@ ul {
 }
 
 ul > li::marker {
-  content: "> ";
+  content: '> ';
   font-size: 1rem;
   font-weight: 500;
   line-height: 0.5rem;
@@ -119,7 +119,9 @@ a {
   text-shadow: 0px 0px 5px #ffa6007e;
   text-decoration: none;
 
-  transition: font-weight 0.25s ease, text-shadow 0.25s ease;
+  transition:
+    font-weight 0.25s ease,
+    text-shadow 0.25s ease;
 
   &:hover {
     font-weight: 700;
@@ -150,7 +152,10 @@ button,
   font-weight: 600;
   // font-family: "Orbitron", sans-serif;
 
-  transition: background 0.2s ease, box-shadow 0.2s ease, border 0.2s ease,
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    border 0.2s ease,
     transform 0.2s ease-in-out;
 
   &:hover {
@@ -177,7 +182,9 @@ button,
   font-weight: 600;
   font-family: inherit;
 
-  transition: border 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover,
   &:focus {

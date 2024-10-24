@@ -2,12 +2,13 @@
   "scripts": {
     "dev": "live-server",
     "check": "biome check --write",
-    "format": "biome format --write",
+    "format": "prettier . --write",
     "lint": "biome lint --write"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "live-server": "^1.2.2",
+    "prettier": "^3.3.3",
     "sass": "^1.80.4"
   },
   "engines": {

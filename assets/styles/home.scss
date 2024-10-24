@@ -1,21 +1,39 @@
 @keyframes light-glitch {
   5% {
-    text-shadow: 0 0 10px #ba9bfd, 0 0 20px #ba9bfd, 0 0 50px #ba9bfd;
+    text-shadow:
+      0 0 10px #ba9bfd,
+      0 0 20px #ba9bfd,
+      0 0 50px #ba9bfd;
   }
   10% {
-    text-shadow: 0 0 10px #6d2bfc0c, 0 0 20px #6d2bfc05, 0 0 50px #6d2bfc0c;
+    text-shadow:
+      0 0 10px #6d2bfc0c,
+      0 0 20px #6d2bfc05,
+      0 0 50px #6d2bfc0c;
   }
   15% {
-    text-shadow: 0 0 10px #ba9bfd, 0 0 20px #ba9bfd, 0 0 50px #ba9bfd;
+    text-shadow:
+      0 0 10px #ba9bfd,
+      0 0 20px #ba9bfd,
+      0 0 50px #ba9bfd;
   }
   60% {
-    text-shadow: 0 0 10px #ba9bfd, 0 0 40px #ba9bfd, 0 0 50px #ba9bfd;
+    text-shadow:
+      0 0 10px #ba9bfd,
+      0 0 40px #ba9bfd,
+      0 0 50px #ba9bfd;
   }
   75% {
-    text-shadow: 0 0 10px #6d2bfc0c, 0 0 20px #6d2bfc05, 0 0 50px #6d2bfc0c;
+    text-shadow:
+      0 0 10px #6d2bfc0c,
+      0 0 20px #6d2bfc05,
+      0 0 50px #6d2bfc0c;
   }
   80% {
-    text-shadow: 0 0 10px #ba9bfd, 0 0 20px #ba9bfd, 0 0 50px #ba9bfd;
+    text-shadow:
+      0 0 10px #ba9bfd,
+      0 0 20px #ba9bfd,
+      0 0 50px #ba9bfd;
   }
 }
 
@@ -28,8 +46,12 @@
         hsla(259, 20%, 10%, 1) 90vh
       ),
       url(../../img/bg_main.webp);
-    background-size: 100% auto, cover;
-    background-position: top center, top center;
+    background-size:
+      100% auto,
+      cover;
+    background-position:
+      top center,
+      top center;
     background-attachment: local, fixed;
     background-repeat: repeat-x;
 

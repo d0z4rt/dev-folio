@@ -12,7 +12,9 @@
       }
     }
     .score-#{$score}::before {
-      animation-name: score-progress-#{$score}, score-opacity;
+      animation-name:
+        score-progress-#{$score},
+        score-opacity;
     }
   }
 }
