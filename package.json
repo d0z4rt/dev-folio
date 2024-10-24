@@ -1,15 +1,18 @@
 {
   "scripts": {
     "dev": "live-server",
+    "build:fonts": "tsx ./bin/font_converter.ts",
     "check": "biome check --write",
     "format": "prettier . --write",
     "lint": "biome lint --write"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.7.9",
     "live-server": "^1.2.2",
     "prettier": "^3.3.3",
-    "sass": "^1.80.4"
+    "sass": "^1.80.4",
+    "tsx": "^4.19.1"
   },
   "engines": {
     "node": ">=18",
