@@ -1,0 +1,250 @@
+@keyframes light-glitch {
+  5% {
+    text-shadow: 0 0 10px #ba9bfd, 0 0 20px #ba9bfd, 0 0 50px #ba9bfd;
+  }
+  10% {
+    text-shadow: 0 0 10px #6d2bfc0c, 0 0 20px #6d2bfc05, 0 0 50px #6d2bfc0c;
+  }
+  15% {
+    text-shadow: 0 0 10px #ba9bfd, 0 0 20px #ba9bfd, 0 0 50px #ba9bfd;
+  }
+  60% {
+    text-shadow: 0 0 10px #ba9bfd, 0 0 40px #ba9bfd, 0 0 50px #ba9bfd;
+  }
+  75% {
+    text-shadow: 0 0 10px #6d2bfc0c, 0 0 20px #6d2bfc05, 0 0 50px #6d2bfc0c;
+  }
+  80% {
+    text-shadow: 0 0 10px #ba9bfd, 0 0 20px #ba9bfd, 0 0 50px #ba9bfd;
+  }
+}
+
+.home {
+  .wrapper {
+    align-items: center;
+    background-image: linear-gradient(
+        180deg,
+        hsla(259, 20%, 10%, 0.5) 10vh,
+        hsla(259, 20%, 10%, 1) 90vh
+      ),
+      url(../../img/bg_main.webp);
+    background-size: 100% auto, cover;
+    background-position: top center, top center;
+    background-attachment: local, fixed;
+    background-repeat: repeat-x;
+
+    section:first-of-type {
+      div {
+        animation: 1s cubic-bezier(0, 0.2, 0.3, 1) 0s 1 slide-in-bottom forwards;
+      }
+    }
+  }
+
+  section {
+    width: 100%;
+    padding: 2rem 1rem;
+    max-width: 1300px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  section:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+    height: 90vh;
+    text-align: center;
+    animation: none;
+    opacity: 1;
+
+    h2 {
+      font-size: 1.58rem;
+      color: #9869fc;
+    }
+
+    a {
+      display: inline-block;
+      transform: scale(1);
+      opacity: 0;
+      animation: 1s cubic-bezier(0, 0.2, 0.3, 1) 0.5s 1 fade-in forwards;
+    }
+    a:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  #projects {
+    padding-top: 7rem;
+  }
+
+  code {
+    width: 36ch;
+    display: inline-flex;
+
+    color: #9869fc;
+
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-family: monospace;
+    animation: light-glitch 2s step-end 0s infinite alternate-reverse;
+  }
+
+  .card_wrapper {
+    padding: 0;
+
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+  }
+
+  .abilities {
+    ul {
+      width: 150px;
+    }
+  }
+
+  .curriculum {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      width: 6rem;
+      height: 6rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    & > aside {
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+
+        & > div {
+          margin: 0.5rem 0;
+
+          gap: 1ch;
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
+
+    span {
+      width: fit-content;
+      padding: 0.2rem 1ch;
+      display: inline-flex;
+      box-sizing: border-box;
+
+      border: 1px solid #7230ff;
+      box-shadow: 0px 0px 10px #5a0ffdad;
+      border-radius: 3px;
+      background-color: #5a0ffd;
+
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      & > * {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
+    input,
+    textarea {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .social {
+    max-width: 800px;
+
+    .card div {
+      width: 100%;
+    }
+
+    ul {
+      width: 100%;
+      padding: 0;
+      box-sizing: border-box;
+
+      gap: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      display: flex;
+    }
+
+    a {
+      width: 1.5rem;
+      padding: 1rem;
+      border-radius: 100%; /* Fix glitching rotation due to rotating a square 🙃 */
+      display: flex;
+      transform: rotate(0deg);
+      transition: transform 0.5s ease-out;
+    }
+
+    a:hover {
+      transform: rotate(720deg);
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    .card_wrapper {
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 510px) {
+    code {
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+    }
+
+    section:first-of-type {
+      h2 {
+        font-size: 1.02rem;
+        width: 200px;
+        margin: 0 auto 2rem auto;
+      }
+    }
+
+    .curriculum {
+      flex-direction: column;
+      & > aside {
+        flex-direction: column;
+      }
+    }
+
+    .contact {
+      flex-direction: column;
+      form {
+        width: 100%;
+      }
+    }
+  }
+}

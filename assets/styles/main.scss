@@ -1,0 +1,187 @@
+@use "./animation.scss";
+@use "./fonts.scss";
+@use "./header.scss";
+@use "./footer.scss";
+@use "./card.scss";
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  color: #c7c7c7;
+  background-color: #030303;
+
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Space Mono", monospace;
+  font-optical-sizing: auto;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-attachment: fixed;
+  background-image: url(../../img/bg2.webp);
+  background-size: cover;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.wrapper {
+  height: 100%;
+  padding: 7rem 0 3rem 0;
+  box-sizing: border-box;
+  align-items: center;
+  background-image: linear-gradient(
+    180deg,
+    hsla(259, 20%, 10%, 0.5) 10vh,
+    hsla(259, 20%, 10%, 1) 90vh
+  );
+  background-size: 100% auto;
+  background-position: top center;
+  background-attachment: local;
+  background-repeat: repeat-x;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: 2s cubic-bezier(0, 0.2, 0.3, 1) 0.5s 1 fade-in forwards;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #e1e1e17c;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+h2,
+h3,
+h4 {
+  color: #6d2bfc;
+}
+
+h3,
+h4 {
+  margin: 0;
+  padding: 0.2rem 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding-left: 2ch;
+}
+
+ul {
+  margin: 0.5rem 0;
+}
+
+ul > li::marker {
+  content: "> ";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 0.5rem;
+}
+
+ul > li:has(.active)::marker {
+  color: #ffa600;
+  text-shadow: 0px 0px 20px #ffa600;
+}
+
+a {
+  color: #ffa600;
+  text-shadow: 0px 0px 5px #ffa6007e;
+  text-decoration: none;
+
+  transition: font-weight 0.25s ease, text-shadow 0.25s ease;
+
+  &:hover {
+    font-weight: 700;
+    text-shadow: 0px 0px 20px #ffa600;
+  }
+
+  &.active {
+    font-weight: 700;
+    text-shadow: 0px 0px 20px #ffa600;
+  }
+}
+
+button,
+.button {
+  width: fit-content;
+  padding: 0.5rem 2ch;
+  box-sizing: border-box;
+
+  color: inherit;
+  cursor: crosshair;
+  border: 1px solid #5a0ffdb6;
+  box-shadow: 0px 0px 0px #5a0ffdf6;
+  border-radius: 3px;
+  background-color: #5a0ffd2f;
+  backdrop-filter: blur(10px);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: "Orbitron", sans-serif;
+
+  transition: background 0.2s ease, box-shadow 0.2s ease, border 0.2s ease,
+    transform 0.2s ease-in-out;
+
+  &:hover {
+    border: 1px solid #7230ff;
+    background-color: #5a0ffd;
+    box-shadow: 0px 0px 50px #5a0ffd;
+  }
+}
+
+.input {
+  width: fit-content;
+  padding: 0.5rem 2ch;
+
+  color: inherit;
+  cursor: vertical-text;
+  border: 1px solid #5a0ffdb6;
+  outline: 0;
+  box-shadow: 0px 0px 0px #5a0ffdf6;
+  border-radius: 5px;
+  background-color: #5a0ffd2f;
+  backdrop-filter: blur(10px);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: inherit;
+
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #7230ff;
+    box-shadow: 0px 0px 50px #5a0ffd;
+  }
+}

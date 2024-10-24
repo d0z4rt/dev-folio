@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D0Z - DevFolio</title>
+    <meta name="description" content="Portfolio" />
+    <meta name="keywords" content="folio, web" />
+    <meta name="author" content="d0z" />
+    <link rel="stylesheet" href="./assets/styles/css/main.css" />
+    <link rel="stylesheet" href="./assets/styles/css/home.css" />
+  </head>
+  <!-- This style is to prevent the flashbang effect when reloading the page at 1am -->
+  <body class="home" style="background-color: black">
+    <header>
+      <div>
+        <a
+          tabindex="-1"
+          href="/"
+          title="I don't know if you're gonna listen to this but I'm missing javascript a lot 😭"
+        >
+          <img
+            height="1050"
+            width="3026"
+            src="./assets/img/logo.svg"
+            alt="logo"
+          />
+        </a>
+        <h1>/ DevFolio</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a tabindex="0" href="/" class="active" title="home page"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a tabindex="0" href="./about.html" title="about page">A propos</a>
+          </li>
+          <li>
+            <a tabindex="0" href="./contact.html" title="contact page"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="wrapper">
+      <section>
+        <div>
+          <code aria-hidden="true">
+            ····································
+            :.________..________..________.....:
+            :|\...___.\|\...__..\|\_____..\....:
+            :\.\..\_|\.\.\..\|\..\\|___/../|...:
+            :.\.\..\.\\.\.\..\\\..\.../.././...:
+            :..\.\..\_\\.\.\..\\\..\./../_/__..:
+            :...\.\_______\.\_______\\________\:
+            :....\|_______|\|_______|\|_______|:
+            ····································
+          </code>
+          <h2 tabindex="0">Maxime C /// Fullstack developer</h2>
+        </div>
+        <a class="button" tabindex="0" href="#projects"
+          >Découvrir mes projets</a
+        >
+      </section>
+      <section id="projects">
+        <h2 tabindex="0">Projets</h2>
+        <div class="card_wrapper">
+          <article class="card large link" aria-labelledby="projet-1-h3">
+            <a
+              href="https://d0z.eu"
+              target="_blank"
+              title="d0z.eu"
+              class="more"
+              aria-labelledby="projet-1-h3"
+              aria-describedby="projet-1-desc"
+              >Voir le projet</a
+            >
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/cover.webp"
+              alt="Site personel cover"
+            />
+            <div>
+              <h3 id="projet-1-h3">Site personel</h3>
+              <ul>
+                <li id="projet-1-desc">
+                  A personal website showcasing my work and digital garden
+                </li>
+                <li class="details">
+                  Solid-Start, Markdown, TypeScript, SASS, ThreeJS
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="card large link" aria-labelledby="projet-2-h3">
+            <a
+              href="#"
+              class="more"
+              aria-labelledby="projet-2-h3"
+              aria-describedby="projet-2-desc"
+              >Voir le projet</a
+            >
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/loic.webp"
+              alt="Projet 1 cover"
+            />
+            <div>
+              <h3 id="projet-2-h3">Projet 1</h3>
+              <ul>
+                <li id="projet-2-desc">Description</li>
+                <li class="details">
+                  Solid-Start, Markdown, TypeScript, ThreeJS
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="card large link" aria-labelledby="projet-3-h3">
+            <a
+              href="https://lafrappe.co"
+              target="_blank"
+              title="lafrappe.co"
+              class="more"
+              aria-labelledby="projet-3-h3"
+              aria-describedby="projet-3-desc"
+              >Voir le projet</a
+            >
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/lafrappe.webp"
+              alt="La Frappe cover"
+            />
+            <div>
+              <h3 id="projet-3-h3">La Frappe</h3>
+              <ul>
+                <li id="projet-3-desc">Description</li>
+                <li class="details">HTML, CSS, JavaScript</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="abilities">
+        <h2 tabindex="0">Compétences</h2>
+        <div class="card_wrapper">
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/html5.svg"
+              alt="HTML logo"
+            />
+            <div>
+              <h3>HTML</h3>
+              <ul>
+                <li>Maîtrise avancée</li>
+                <li
+                  aria-label="score de 99%"
+                  class="score score-99"
+                  data-score="99"
+                />
+                <li aria-hidden="true">🎨🩻</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/css3.svg"
+              alt="CSS logo"
+            />
+            <div>
+              <h3>CSS</h3>
+              <ul>
+                <li>Maîtrise avancée</li>
+                <li
+                  aria-label="score de 90%"
+                  class="score score-90"
+                  data-score="90"
+                />
+                <li aria-hidden="true">🎨🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/sass.svg"
+              alt="SASS logo"
+            />
+            <div>
+              <h3>Sass</h3>
+              <ul>
+                <li>Bonne maîtrise</li>
+                <li
+                  aria-label="score de 70%"
+                  class="score score-70"
+                  data-score="70"
+                />
+                <li aria-hidden="true">🎨🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/typescript.svg"
+              alt="TypeScript logo"
+            />
+            <div>
+              <h3>TypeScript</h3>
+              <ul>
+                <li>Maîtrise avancée</li>
+                <li
+                  aria-label="score de 80%"
+                  class="score score-80"
+                  data-score="80"
+                />
+                <li aria-hidden="true">👾🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/reactjs.svg"
+              alt="React logo"
+            />
+            <div>
+              <h3>React</h3>
+              <ul>
+                <li>Bonne maîtrise</li>
+                <li
+                  aria-label="score de 70%"
+                  class="score score-70"
+                  data-score="70"
+                />
+                <li aria-hidden="true">👾🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/solidjs.svg"
+              alt="SolidJS logo"
+            />
+            <div>
+              <h3>SolidJS</h3>
+              <ul>
+                <li>Maîtrise avancée</li>
+                <li
+                  aria-label="score de 80%"
+                  class="score score-80"
+                  data-score="80"
+                />
+                <li aria-hidden="true">👾🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/nestjs.svg"
+              alt="NestJS logo"
+            />
+            <div>
+              <h3>NestJS</h3>
+              <ul>
+                <li>Maîtrise avancée</li>
+                <li
+                  aria-label="score de 80%"
+                  class="score score-80"
+                  data-score="80"
+                />
+                <li aria-hidden="true">👾🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/nodejs.svg"
+              alt="Node.js logo"
+            />
+            <div>
+              <h3>Node.js</h3>
+              <ul>
+                <li>Maîtrise avancée</li>
+                <li
+                  aria-label="score de 80%"
+                  class="score score-80"
+                  data-score="80"
+                />
+                <li aria-hidden="true">👾🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/bunsh.svg"
+              alt="Bun.sh logo"
+            />
+            <div>
+              <h3>Bun.sh</h3>
+              <ul>
+                <li>Maîtrise moyenne</li>
+                <li
+                  aria-label="score de 50%"
+                  class="score score-50"
+                  data-score="50"
+                />
+                <li aria-hidden="true">👾🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/docker.svg"
+              alt="Docker logo"
+            />
+            <div>
+              <h3>Docker</h3>
+              <ul>
+                <li>Maîtrise avancée</li>
+                <li
+                  aria-label="score de 80%"
+                  class="score score-80"
+                  data-score="80"
+                />
+                <li aria-hidden="true">👾🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/python.svg"
+              alt="Python logo"
+            />
+            <div>
+              <h3>Python</h3>
+              <ul>
+                <li>Maîtrise moyenne</li>
+                <li
+                  aria-label="score de 50%"
+                  class="score score-50"
+                  data-score="50"
+                />
+                <li aria-hidden="true">👾🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/rust.svg"
+              alt="Rust logo"
+            />
+            <div>
+              <h3>Rust</h3>
+              <ul>
+                <li>En apprentissage</li>
+                <li
+                  aria-label="score de 20%"
+                  class="score score-20"
+                  data-score="20"
+                />
+                <li aria-hidden="true">👾🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/php.svg"
+              alt="PHP logo"
+            />
+            <div>
+              <h3>PHP</h3>
+              <ul>
+                <li>Maîtrise moyenne</li>
+                <li
+                  aria-label="score de 50%"
+                  class="score score-50"
+                  data-score="50"
+                />
+                <li aria-hidden="true">👾🗿</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" tabindex="0">
+            <img
+              height="512"
+              width="512"
+              src="./assets/img/linux.svg"
+              alt="Linux logo"
+            />
+            <div>
+              <h3>Linux</h3>
+              <ul>
+                <li>Bonne maîtrise</li>
+                <li
+                  aria-label="score de 70%"
+                  class="score score-70"
+                  data-score="70"
+                />
+                <li aria-hidden="true">🍥</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="curriculum">
+        <aside tabindex="0">
+          <img
+            height="1080"
+            width="1920"
+            src="./assets/img/hackerman.webp"
+            alt="photo of me"
+          />
+          <div>
+            <h3>Maxime C</h3>
+            <div>
+              <span>Graphic designer</span><span>Fullstack developer</span>
+            </div>
+            <p>About me and stuff</p>
+          </div>
+        </aside>
+        <button>Télécharger mon CV</button>
+      </section>
+      <section class="contact">
+        <h2 tabindex="0">Me contacter</h2>
+        <form>
+          <label id="contact-name-label" for="contact-name">Nom</label>
+          <input
+            id="contact-name"
+            name="contact-name"
+            aria-labelledby="contact-name-label"
+            class="input"
+          />
+          <label id="contact-email-label" for="contact-email">Email</label>
+          <input
+            id="contact-email"
+            name="contact-email"
+            aria-labelledby="contact-email-label"
+            class="input"
+          />
+          <label id="contact-message-label" for="contact-message"
+            >Message</label
+          >
+          <textarea
+            id="contact-message"
+            name="contact-message"
+            aria-labelledby="contact-message-label"
+            class="input"
+          ></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+      <section class="social">
+        <h2 tabindex="0">Réseaux sociaux</h2>
+        <div class="card_wrapper">
+          <div class="card large" tabindex="0">
+            <img
+              height="1080"
+              width="1920"
+              src="./assets/img/hackerman.webp"
+              alt="photo of me"
+            />
+            <div>
+              <h3>Retrouvez moi sur :</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.instagram.com/d0z.eu"
+                    target="_blank"
+                    title="instagram"
+                  >
+                    <img
+                      height="512"
+                      width="512"
+                      src="./assets/img/instagram.svg"
+                      alt="instagram"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/d0z4rt"
+                    target="_blank"
+                    title="github"
+                  >
+                    <img
+                      height="512"
+                      width="512"
+                      src="./assets/img/github.svg"
+                      alt="github"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/d0z/"
+                    target="_blank"
+                    title="linkedin"
+                  >
+                    <img
+                      height="512"
+                      width="512"
+                      src="./assets/img/linkedin.svg"
+                      alt="linkedin"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li>
+          <a href="./about.html" title="about page">Mentions légales</a>
+        </li>
+        <li>
+          <a href="https://d0z.eu" target="_blank" title="personal website">
+            Site principal
+          </a>
+        </li>
+        <li>
+          <a href="#" title="copyrights">© 2024 D0Z</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

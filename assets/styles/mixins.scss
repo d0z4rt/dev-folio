@@ -1,0 +1,18 @@
+@mixin score-progress($scores...) {
+  @each $score in $scores {
+    @keyframes score-progress-#{$score} {
+      0% {
+        width: 0%;
+      }
+      70% {
+        width: $score + 0%;
+      }
+      100% {
+        width: $score + 0%;
+      }
+    }
+    .score-#{$score}::before {
+      animation-name: score-progress-#{$score}, score-opacity;
+    }
+  }
+}

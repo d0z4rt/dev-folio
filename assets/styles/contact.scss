@@ -1,0 +1,145 @@
+.contact {
+  /** 
+   * Originaly defined in ./main.css
+   * Reset here using grid for the purpose of the exercice
+   */
+  .wrapper {
+    height: 100%;
+    overflow-y: scroll;
+
+    display: grid;
+    grid-template-rows: auto repeat(5, 1fr) auto;
+    grid-template-columns: 100%;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  section {
+    width: 100%;
+    max-width: 1300px;
+    align-self: center;
+  }
+
+  section:first-of-type {
+    padding: 3rem 1rem;
+    text-align: center;
+    animation: 1s cubic-bezier(0, 0.2, 0.3, 1) 0s 1 slide-in-bottom forwards;
+  }
+
+  section:has(form) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  section:has(.card) {
+    padding: 5rem 1rem;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1rem;
+    grid-auto-flow: column;
+  }
+
+  section:last-of-type {
+    position: relative;
+    padding: 3rem 1rem;
+
+    &::before {
+      position: absolute;
+      inset: 3rem 1rem 3rem 1rem;
+      box-sizing: border-box;
+      display: block;
+      content: '';
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 2rem auto;
+    grid-template-rows: auto auto;
+
+    span {
+      grid-row: span 2;
+    }
+  }
+
+  section img {
+    width: 100%;
+    border-radius: 5px;
+    mix-blend-mode: screen;
+    border: 1px solid #5a0ffd4d;
+  }
+
+  form {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    span {
+      font-size: 0.7rem;
+    }
+
+    select {
+      display: grid;
+      width: 100%;
+    }
+
+    option {
+      color: inherit;
+      cursor: vertical-text;
+      border: 1px solid #5a0ffdb6;
+      outline: 0;
+      box-shadow: 0px 0px 0px #5a0ffdf6;
+      border-radius: 5px;
+      background-color: #5a0ffd67;
+      lighting-color: #5a0ffde8;
+
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: inherit;
+    }
+
+    div:last-child {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    section:has(form) {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto 3fr;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      form {
+        margin-top: 2rem;
+      }
+    }
+
+    section:has(.card) {
+      grid-auto-flow: row;
+    }
+  }
+}

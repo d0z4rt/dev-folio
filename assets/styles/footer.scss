@@ -1,0 +1,35 @@
+footer {
+  width: 100%;
+  bottom: 0;
+  z-index: 200;
+  padding: 0.1rem;
+  position: fixed;
+  box-sizing: border-box;
+
+  border-top: 1px solid #5a0ffd4d;
+  backdrop-filter: blur(20px);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+  }
+
+  li {
+    height: fit-content;
+    padding: 0.2rem 0;
+    box-sizing: border-box;
+    margin-left: 3ch;
+  }
+
+  a {
+    padding: 0.2rem 0;
+    text-transform: capitalize;
+  }
+}

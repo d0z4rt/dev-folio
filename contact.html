@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D0Z - Contact</title>
+    <meta name="description" content="Portfolio" />
+    <meta name="keywords" content="folio, web" />
+    <meta name="author" content="d0z" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="./assets/styles/contact.css" />
+  </head>
+  <body class="contact">
+    <header>
+      <div>
+        <a tabindex="-1" href="/" title="home">
+          <img src="./assets/logo.svg" alt="logo" />
+        </a>
+        <h1>/ DevFolio</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a tabindex="1" href="/" title="home page">Accueil</a>
+          </li>
+          <li>
+            <a tabindex="2" href="./about.html" title="about page">A propos</a>
+          </li>
+          <li>
+            <a
+              tabindex="3"
+              href="./contact.html"
+              class="active"
+              title="contact page"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="wrapper">
+      <section tabindex="4">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us</p>
+      </section>
+      <section>
+        <div tabindex="0">
+          <h2>Contact Form</h2>
+          <p>Please fill in the required fields</p>
+        </div>
+        <form>
+          <div>
+            <label id="contact_name-label" for="contact_name">Full Name</label>
+            <input
+              id="contact_name"
+              name="contact_name"
+              class="input"
+              aria-labelledby="contact_name-label"
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div>
+            <label id="contact_email-label" for="email">Email</label>
+            <input
+              id="contact_email"
+              name="contact_email"
+              type="email"
+              aria-labelledby="contact_email-label"
+              class="input"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div>
+            <label id="contact_subject-label" for="contact_subject"
+              >Subject</label
+            >
+            <select
+              id="contact_subject"
+              name="contact_subject"
+              class="input"
+              aria-labelledby="contact_subject-label"
+            >
+              <option value="general">General Inquiry</option>
+              <option value="feedback">Feedback</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label id="contact_message-label" for="contact_message"
+              >Message</label
+            >
+            <textarea
+              id="contact_message"
+              name="contact_message"
+              aria-labelledby="contact_message-label"
+              class="input"
+            >
+Enter your message</textarea
+            >
+          </div>
+          <div>
+            <label id="contact_file-label" for="contact_file"
+              >Attach File</label
+            >
+            <input
+              id="contact_file"
+              name="contact_file"
+              type="file"
+              class="input"
+              placeholder="Select"
+              aria-labelledby="contact_file-label"
+            />
+            <span>Max file size: 5MB</span>
+          </div>
+          <div>
+            <button type="button">Subscribe to Newsletter</button>
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </section>
+      <section>
+        <div class="card" tabindex="0">
+          <span>📞</span>
+          <h3>Phone</h3>
+          <p>+33 644 545 445</p>
+        </div>
+        <div class="card" tabindex="0">
+          <span>✉️</span>
+          <h3>Email</h3>
+          <p>+33 644 545 445</p>
+        </div>
+        <div class="card" tabindex="0">
+          <span>🏠</span>
+          <h3>Address</h3>
+          <p>+33 644 545 445</p>
+        </div>
+      </section>
+      <section>
+        <div tabindex="0">
+          <h2>Newsletter Subscription</h2>
+          <p>Stay up to date with the latest news</p>
+        </div>
+        <form>
+          <div>
+            <label id="newsletter_name-label" for="newsletter_name"
+              >Full Name</label
+            >
+            <input
+              id="newsletter_name"
+              name="newsletter_name"
+              class="input"
+              aria-labelledby="newsletter_name-label"
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div>
+            <label id="newsletter_email-label" for="newsletter_email"
+              >Email</label
+            >
+            <input
+              id="newsletter_email"
+              name="newsletter_email"
+              type="email"
+              aria-labelledby="newsletter_email-label"
+              class="input"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div>
+            <button type="button">Unsubscribe</button>
+            <button type="submit">Subscribe</button>
+          </div>
+        </form>
+      </section>
+      <section>
+        <img
+          src="./assets/map.png"
+          alt="see my position on a map"
+          tabindex="0"
+        />
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li>
+          <a href="./about.html" title="about page">Mentions légales</a>
+        </li>
+        <li>
+          <a href="https://d0z.eu" target="_blank" title="personal website">
+            Site principal
+          </a>
+        </li>
+        <li>
+          <a href="#" title="copyrights">© 2024 D0Z</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
