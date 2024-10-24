@@ -1,12 +1,26 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 
+/**
+ * replace dashes `-` with spaces and puts the first
+ * letter of each word in uppercase
+ * @example "kebab-case" -> "Kebab Case"
+ * @param string
+ * @returns the string Capitalized
+ */
 const kebabToCapitalized = (string: string) => {
   return string
     .replace('-', ' ')
     .replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase())
 }
 
+/**
+ * Convert a woff2 font file to base64 and format it
+ * as a `@font-face` css declaration
+ * @param fontsPath
+ * @param fontFilename
+ * @returns
+ */
 const fontFileToBase64 = async (
   fontsPath: string,
   fontFilename: string
@@ -24,12 +38,16 @@ const fontFileToBase64 = async (
   return fontCSS
 }
 
-;(async () => {
-  const fontsPath = path.join(process.cwd(), 'assets', 'fonts')
-  const outputPath = path.join(fontsPath, 'fonts.css')
-
+/**
+ * Converts all the woff2 font files of a directory to
+ * base64 strings and output it to the selected file
+ * @param fontsPath
+ * @param outputPath
+ */
+const fontConverter = async (fontsPath: string, outputPath: string) => {
   try {
     const fonts = await fs.readdir(fontsPath, { recursive: true })
+
     const promises: Promise<string>[] = []
     for (const fontFilename of fonts) {
       if (path.extname(fontFilename) === '.woff2') {
@@ -37,6 +55,7 @@ const fontFileToBase64 = async (
       }
     }
     const fontFilenames = await Promise.all(promises)
+
     await fs.writeFile(outputPath, fontFilenames.join(''))
   } catch (error) {
     console.error(error)
@@ -46,4 +65,10 @@ const fontFileToBase64 = async (
       `✨ Fonts are ready for import at:\n${outputPath}`
     )
   }
+}
+
+;(async () => {
+  const fontsPath = path.join(process.cwd(), 'assets', 'fonts')
+  const outputPath = path.join(fontsPath, 'fonts.css')
+  await fontConverter(fontsPath, outputPath)
 })()
