@@ -1,5 +1,4 @@
 @use './animation.scss';
-@use './fonts.scss';
 @use './header.scss';
 @use './footer.scss';
 @use './card.scss';
@@ -16,7 +15,7 @@ body {
 
   font-style: normal;
   font-weight: 400;
-  // font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
   font-optical-sizing: auto;
 }
 
@@ -150,7 +149,7 @@ button,
 
   font-size: 0.8rem;
   font-weight: 600;
-  // font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
 
   transition:
     background 0.2s ease,
