@@ -154,7 +154,7 @@
     &::before {
       content: '';
       inset: 0;
-      height: 1.4rem;
+      height: 100%;
       display: flex;
       background: linear-gradient(90deg, #5a0ffd, hsl(259, 98%, 65%));
       border-radius: 3px;
