@@ -81,7 +81,7 @@
     padding-top: 7rem;
   }
 
-  code {
+  pre {
     width: 36ch;
     display: inline-flex;
 
@@ -89,7 +89,7 @@
 
     font-size: 1.5rem;
     line-height: 1.5rem;
-    font-family: monospace;
+    // font-family: monospace;
     animation: light-glitch 2s step-end 0s infinite alternate-reverse;
   }
 
@@ -220,7 +220,7 @@
   }
 
   @media screen and (max-width: 510px) {
-    code {
+    pre {
       font-size: 0.8rem;
       line-height: 0.8rem;
     }
