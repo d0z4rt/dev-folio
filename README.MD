@@ -10,6 +10,8 @@ You can find the utilities used to build it in `./bin`
 
 ## start
 
+You'll need [pnpm](https://pnpm.io/) and [Node.js](https://nodejs.org/)
+
 This project uses `live-server` and `sass` in development, to start and watch files simply use the following commands:
 
 ```shell
