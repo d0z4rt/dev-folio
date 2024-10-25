@@ -2,7 +2,11 @@
 
 ![cover](./assets/img/og-image.png)
 
-Static website built using HTML and sass. You can find the utilities used to build it in `./bin`
+Static website built using HTML and sass
+
+live preview available at [d0z.fr](https://d0z.fr)
+
+You can find the utilities used to build it in `./bin`
 
 ## start
 
