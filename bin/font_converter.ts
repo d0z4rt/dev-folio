@@ -67,7 +67,7 @@ const fontConverter = async (fontsPath: string, outputPath: string) => {
   }
 }
 
-;(async () => {
+await (async () => {
   const fontsPath = path.join(process.cwd(), 'assets', 'fonts')
   const outputPath = path.join(fontsPath, 'fonts.css')
   await fontConverter(fontsPath, outputPath)
