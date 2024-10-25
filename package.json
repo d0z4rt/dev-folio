@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "tsx ./bin/dev.ts",
-    "dev:bin": "tsx ./bin/dev.ts",
+    "dev:bin": "tsx --watch ./bin/dev.ts",
     "build:fonts": "tsx ./bin/font_converter.ts",
     "check": "biome check --write",
     "format": "prettier . --write",

@@ -45,30 +45,27 @@ const fontFileToBase64 = async (
  * @param outputPath
  */
 const fontConverter = async (fontsPath: string, outputPath: string) => {
-  try {
-    const fonts = await fs.readdir(fontsPath, { recursive: true })
+  const fonts = await fs.readdir(fontsPath, { recursive: true })
 
-    const promises: Promise<string>[] = []
-    for (const fontFilename of fonts) {
-      if (path.extname(fontFilename) === '.woff2') {
-        promises.push(fontFileToBase64(fontsPath, fontFilename))
-      }
+  const promises: Promise<string>[] = []
+  for (const fontFilename of fonts) {
+    if (path.extname(fontFilename) === '.woff2') {
+      promises.push(fontFileToBase64(fontsPath, fontFilename))
     }
-    const fontFilenames = await Promise.all(promises)
-
-    await fs.writeFile(outputPath, fontFilenames.join(''))
-  } catch (error) {
-    console.error(error)
-  } finally {
-    console.info(
-      '\x1b[32m%s\x1b[0m',
-      `✨ Fonts are ready for import at:\n${outputPath}`
-    )
   }
+  const fontFilenames = await Promise.all(promises)
+
+  await fs.writeFile(outputPath, fontFilenames.join(''))
 }
 
-;(async () => {
-  const fontsPath = path.join(process.cwd(), 'assets', 'fonts')
-  const outputPath = path.join(fontsPath, 'fonts.css')
-  await fontConverter(fontsPath, outputPath)
-})()
+console.info('\x1b[33m🔥 Starting up...\x1b[0m')
+const fontsPath = path.join(process.cwd(), 'assets', 'fonts')
+const outputPath = path.join(fontsPath, 'fonts.css')
+fontConverter(fontsPath, outputPath)
+  .then(() => {
+    console.info(
+      '\x1b[32m%s\x1b[0m',
+      `✨ Fonts are ready for import from:\n${path.join('assets', 'fonts', 'fonts.css')}`
+    )
+  })
+  .catch(console.error)
