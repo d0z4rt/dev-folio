@@ -44,15 +44,6 @@
   section:last-of-type {
     position: relative;
     padding: 3rem 1rem;
-
-    &::before {
-      position: absolute;
-      inset: 3rem 1rem 3rem 1rem;
-      box-sizing: border-box;
-      display: block;
-      content: '';
-      backdrop-filter: blur(10px);
-    }
   }
 
   .card {
@@ -69,7 +60,6 @@
     width: 100%;
     height: auto;
     border-radius: 5px;
-    mix-blend-mode: screen;
     border: 1px solid #5a0ffd4d;
   }
 
