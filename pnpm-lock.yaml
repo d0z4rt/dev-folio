@@ -11,6 +11,9 @@ importers:
       '@biomejs/biome':
         specifier: ^1.9.4
         version: 1.9.4
+      '@parcel/watcher':
+        specifier: ^2.4.1
+        version: 2.4.1
       '@types/node':
         specifier: ^22.7.9
         version: 22.7.9
