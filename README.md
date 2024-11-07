@@ -2,7 +2,7 @@
 
 ![cover](./assets/img/og-image.png)
 
-Static website built using HTML and sass
+Static website built using HTML, sass and JavaScript
 
 live preview available at [d0z.fr](https://d0z.fr)
 

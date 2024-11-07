@@ -96,6 +96,7 @@
           </li>
         </ul>
       </nav>
+      <a id="admin-button" href="./admin/">🔒</a>
     </header>
     <main class="wrapper">
       <section>
@@ -113,14 +114,21 @@
           >
           <h2 tabindex="0">Maxime C /// Fullstack developer</h2>
         </div>
-        <a class="button" tabindex="0" href="#projects"
+        <a
+          id="discover-projects-button"
+          class="button"
+          tabindex="0"
+          href="#projects"
           >Découvrir mes projets</a
         >
       </section>
       <section id="projects">
         <h2 tabindex="0">Projets</h2>
         <div class="card_wrapper">
-          <article class="card large link" aria-labelledby="projet-1-h3">
+          <article
+            class="card large link scroll-trigger left"
+            aria-labelledby="projet-1-h3"
+          >
             <a
               href="https://d0z.eu"
               target="_blank"
@@ -150,7 +158,10 @@
               </ul>
             </div>
           </article>
-          <article class="card large link" aria-labelledby="projet-2-h3">
+          <article
+            class="card large link scroll-trigger top"
+            aria-labelledby="projet-2-h3"
+          >
             <a
               href="#"
               class="more"
@@ -176,7 +187,10 @@
               </ul>
             </div>
           </article>
-          <article class="card large link" aria-labelledby="projet-3-h3">
+          <article
+            class="card large link scroll-trigger right"
+            aria-labelledby="projet-3-h3"
+          >
             <a
               href="https://lafrappe.co"
               target="_blank"
@@ -537,7 +551,7 @@
         </aside>
         <button>Télécharger mon CV</button>
       </section>
-      <section class="contact">
+      <section class="contact scroll-trigger">
         <h2 tabindex="0">Me contacter</h2>
         <form>
           <label id="contact-name-label" for="contact-name">Nom</label>
@@ -650,5 +664,6 @@
         </li>
       </ul>
     </footer>
+    <script type="module" src="./assets/scripts/home.mjs"></script>
   </body>
 </html>

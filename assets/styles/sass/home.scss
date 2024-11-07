@@ -39,6 +39,8 @@
 
 .home {
   .wrapper {
+    width: 100%;
+    overflow-x: hidden;
     align-items: center;
     background-image: linear-gradient(
         180deg,
@@ -78,7 +80,7 @@
     justify-content: space-around;
     align-items: center;
     flex-shrink: 0;
-    height: 90vh;
+    height: 80vh;
     text-align: center;
     animation: none;
     opacity: 1;
@@ -101,6 +103,23 @@
 
   #projects {
     padding-top: 7rem;
+    perspective: 1000px;
+
+    .scroll-trigger {
+      transition: transform 0.5s ease-out;
+      &.left {
+        transform: translateZ(-100px) translateX(-200px);
+      }
+      &.top {
+        transform: translateZ(-100px) translateY(50px);
+      }
+      &.right {
+        transform: translateZ(-100px) translateX(200px);
+      }
+      &.intersected {
+        transform: translateZ(0) translateX(0) translateY(0);
+      }
+    }
   }
 
   pre {
@@ -122,7 +141,9 @@
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;
+    perspective: 1000px;
     justify-content: stretch;
+    overflow: visible;
   }
 
   .abilities {
@@ -198,6 +219,27 @@
     input,
     textarea {
       margin-bottom: 1rem;
+    }
+
+    &.scroll-trigger {
+      h2 {
+        transform: translateX(-400px);
+        transition: transform 0.5s ease-out;
+      }
+
+      form {
+        transform: translateX(400px);
+        transition: transform 0.5s ease-out;
+      }
+      &.intersected {
+        h2 {
+          transform: translateX(0px);
+        }
+
+        form {
+          transform: translateX(0px);
+        }
+      }
     }
   }
 

@@ -10,6 +10,7 @@ const LIVE_SERVER_CONFIG = {
   host: '0.0.0.0', // Set the address to bind to. Defaults to 0.0.0.0 or process.env.IP.
   root: '.', // Set root directory that's being served. Defaults to cwd.
   open: true, // When false, it won't load your browser by default.
+  // * Ignore sass files
   ignore: `${path.join('.', 'assets', 'styles', 'sass')}`, // comma-separated string for paths to ignore
   file: undefined, // When set, serve this file (server root relative) for every 404 (useful for single-page applications)
   wait: 100, // Waits for all changes, before reloading. Defaults to 0 ms.
@@ -18,6 +19,11 @@ const LIVE_SERVER_CONFIG = {
   middleware: [] // Takes an array of Connect-compatible middleware that are injected into the server middleware stack
 }
 
+/**
+ * Convert sass to css and write to file
+ * @param sassPath
+ * @param outputPath
+ */
 const compileAndWriteStyle = async (sassPath: string, outputPath: string) => {
   const result = sass.compile(sassPath, { style: 'compressed' })
   await fs.writeFile(outputPath, result.css)
@@ -26,6 +32,12 @@ const compileAndWriteStyle = async (sassPath: string, outputPath: string) => {
   )
 }
 
+/**
+ * Subscriber used in the parcel watcher,
+ * Watch for sass or scss file change
+ * @param err
+ * @param events
+ */
 const sassSubscriber = async (err: Error | null, events: watcher.Event[]) => {
   try {
     const promises = events
@@ -44,9 +56,15 @@ const sassSubscriber = async (err: Error | null, events: watcher.Event[]) => {
 
 console.info('\x1b[33m🔥 Starting up...\x1b[0m')
 
+// Used to close the subscription
 let sassWatcher: watcher.AsyncSubscription | undefined
+
 const sassPath = path.join(process.cwd(), 'assets', 'styles', 'sass')
 const cssPath = path.join(process.cwd(), 'assets', 'styles', 'css')
+
+/**
+ * ! Start the sass watcher
+ */
 watcher
   .subscribe(sassPath, sassSubscriber, {
     ignore: ['**/node_modules/**', '**/css/**']
@@ -57,8 +75,14 @@ watcher
   })
   .catch(console.error)
 
+/**
+ * ! Start the server for serving static files
+ */
 liveServer.start(LIVE_SERVER_CONFIG)
 
+/**
+ * Clean shutdown
+ */
 const cleanup = () => {
   console.info('\x1b[33m👋 Shutting down...\x1b[0m')
   liveServer.shutdown()

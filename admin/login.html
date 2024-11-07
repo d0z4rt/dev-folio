@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="../assets/styles/css/main.css" />
+    <link rel="stylesheet" href="../assets/styles/css/admin.css" />
+  </head>
+  <body>
+    <form id="login-form">
+      <label for="username">Username</label>
+      <input class="input" required type="text" name="username" id="username" />
+      <label for="password">Password</label>
+      <input
+        class="input"
+        required
+        type="password"
+        name="password"
+        id="password"
+      />
+      <button type="submit">Login</button>
+      <p id="error-message">Wrong username or password</p>
+    </form>
+    <script type="module" src="../assets/scripts/admin-login.mjs"></script>
+  </body>
+</html>

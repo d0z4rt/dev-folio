@@ -15,6 +15,16 @@ header {
   backdrop-filter: blur(20px);
   border-bottom: 1px solid #5a0ffd4d;
 
+  #admin-button {
+    position: absolute;
+    top: 6rem;
+    right: 1rem;
+    backdrop-filter: blur(20px);
+    border: 1px solid #5a0ffd4d;
+    padding: 0.5rem;
+    border-radius: 5rem;
+  }
+
   img {
     height: 4rem;
     width: auto;
