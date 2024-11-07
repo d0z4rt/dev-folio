@@ -5,6 +5,10 @@ import {
 } from './projects.mjs'
 
 /**
+ * ! This file is used for the admin page (admin/index.html)
+ */
+
+/**
  * Check if an user has already logged in using local storage
  */
 const checkUserLogin = () => {

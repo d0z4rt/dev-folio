@@ -1,5 +1,8 @@
 import { escapeRegExp } from './utils.mjs'
 
+/**
+ * MOCK projects
+ */
 export const projects = [
   {
     id: 'ec98cc14-0412-40ba-8ec0-fe538cfdd404',

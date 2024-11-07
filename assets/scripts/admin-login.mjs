@@ -1,3 +1,10 @@
+/**
+ * ! This file is used for the login page (admin/login.html)
+ */
+
+/**
+ * Initialize login form, add event listeners
+ */
 const initLoginForm = () => {
   const errorElement = document.querySelector('#error-message')
   const loginFormElement = document.querySelector('#login-form')
