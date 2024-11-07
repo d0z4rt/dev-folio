@@ -1,3 +1,8 @@
+/**
+ * Use a selector to attach an intersection observer to multiple elements
+ * @param {*} selectors
+ * @param {*} options - Intersection observer options
+ */
 export const triggerOnScroll = (selectors, options = {}) => {
   const elements = document.querySelectorAll(selectors)
 
@@ -7,6 +12,12 @@ export const triggerOnScroll = (selectors, options = {}) => {
   }
 }
 
+/**
+ * Attach an intersection observer to the specified element
+ * @param {*} element
+ * @param {*} options
+ * @returns
+ */
 const attachIntersectionObserver = (element, options) => {
   // fallback for older browsers
   if (!('IntersectionObserver' in window)) {
@@ -29,4 +40,13 @@ const attachIntersectionObserver = (element, options) => {
   }, options)
   // attach the observer
   observer.observe(element)
+}
+
+/**
+ * Escape regex characters from a string
+ * @param {string} string
+ * @returns string
+ */
+export const escapeRegExp = (string) => {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') // $& means the whole matched string
 }

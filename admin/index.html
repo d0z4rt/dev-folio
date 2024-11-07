@@ -8,8 +8,20 @@
     <link rel="stylesheet" href="../assets/styles/css/main.css" />
     <link rel="stylesheet" href="../assets/styles/css/admin.css" />
   </head>
-  <body>
-    <button id="logout-button" type="button">Logout</button>
+  <body class="admin">
+    <header>
+      <h1>Dashboard</h1>
+      <button onclick="window.location = '/'" type="button">Home</button>
+      <button id="logout-button" type="button">Logout</button>
+    </header>
+    <main class="wrapper">
+      <h2>Projects Management</h2>
+      <div>
+        <h3>Search for projects</h3>
+        <input class="input" type="search" id="projects-search" />
+      </div>
+      <section id="projects-container"></section>
+    </main>
     <script type="module" src="../assets/scripts/admin.mjs"></script>
   </body>
 </html>
