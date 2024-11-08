@@ -29,7 +29,7 @@ This project uses some JS
 - on the home page (`/`)
   - scroll animation when the "Decouvrir mes projets" button is clicked
   - transition of some elements in the view when the page is scrolled
-- on the admin page ('/admin/')
+- on the admin page (`/admin/`)
   - navigation between different pages
   - search input
   - login form
