@@ -21,17 +21,18 @@ body {
   font-optical-sizing: auto;
 }
 
-body::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-attachment: fixed;
-  background-image: url(../../img/bg2.webp);
-  background-size: cover;
-  mix-blend-mode: screen;
-  pointer-events: none;
-  z-index: 1000;
-}
+// ! Disabled for performances
+// body::after {
+//   content: '';
+//   position: absolute;
+//   inset: 0;
+//   background-attachment: fixed;
+//   background-image: url(../../img/bg2.webp);
+//   background-size: cover;
+//   mix-blend-mode: screen;
+//   pointer-events: none;
+//   z-index: 1000;
+// }
 
 .wrapper {
   height: 100%;

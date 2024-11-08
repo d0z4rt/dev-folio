@@ -22,6 +22,18 @@ pnpm i
 pnpm dev
 ```
 
+## JavaScript
+
+This project uses some JS
+
+- on the home page (`/`)
+  - scroll animation when the "Decouvrir mes projets" button is clicked
+  - transition of some elements in the view when the page is scrolled
+- on the admin page ('/admin/')
+  - navigation between different pages
+  - search input
+  - login form
+
 ## Convert fonts
 
 Utility that converts `woff2` font files to base64 and embed them in a css file, in order for it to work properly font filenames needs to be of the following format: `font-name_weight.woff2` ex: `space-grotesk_500.woff2`

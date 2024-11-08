@@ -161,18 +161,19 @@
       width: 0;
       opacity: 0.5;
 
-      animation-delay: 0;
-      animation-duration: 4s;
-      animation-direction: normal;
-      animation-timing-function: cubic-bezier(0.36, 0.39, 0.36, 0.9);
-      animation-iteration-count: infinite;
-      animation-fill-mode: forwards;
+      transition: width 2s cubic-bezier(0.36, 0.39, 0.36, 0.9);
+      // animation-delay: 0;
+      // animation-duration: 4s;
+      // animation-direction: normal;
+      // animation-timing-function: cubic-bezier(0.36, 0.39, 0.36, 0.9);
+      // animation-iteration-count: infinite;
+      // animation-fill-mode: forwards;
     }
   }
 
-  &:hover .score::before {
-    animation-play-state: running;
-  }
+  // &:hover .score::before {
+  //   animation-play-state: running;
+  // }
 
   @include mixins.score-progress(20, 50, 70, 80, 90, 99);
 }

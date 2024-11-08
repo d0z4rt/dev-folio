@@ -14,7 +14,7 @@ export const triggerOnScroll = (selectors, options = {}) => {
 
 /**
  * Attach an intersection observer to the specified element
- * @param {*} element
+ * @param {HTMLElement} element
  * @param {*} options
  * @returns
  */

@@ -20,3 +20,11 @@ document
  * Trigger animations when scrolling on the page
  */
 triggerOnScroll('.scroll-trigger', { rootMargin: '-100px', runOnce: true })
+
+/**
+ * Trigger animations when scrolling on the page
+ */
+triggerOnScroll('.score', {
+  rootMargin: '-50px',
+  runOnce: false
+})

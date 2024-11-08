@@ -101,7 +101,7 @@ export const createProjectsElements = (container, projects) => {
  * match either the name, description or the details of a project
  *
  * @param {string} _searchString
- * @param {Object} projects
+ * @param {Array} projects
  * @param {boolean} useRegex
  * @returns a list of matching projects
  */
